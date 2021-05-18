@@ -22,4 +22,4 @@ def predict():
 
     output = names[pred[0]]
 
-    return render_template("index.html", prediction_text=output)
+    return render_template("index.html", prediction_text="Iris " + output)
