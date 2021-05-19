@@ -1,5 +1,5 @@
 import numpy as np
-from flask import Flask, request, render_template
+from flask import Flask, jsonify, request, render_template
 
 import pickle
 
@@ -23,3 +23,12 @@ def predict():
     output = names[pred[0]]
 
     return render_template("index.html", prediction_text="Iris " + output)
+
+
+@app.route("/api", methods=["POST"])
+def results():
+    data = request.get_json(force=True)
+    pred = model.predict([np.array(list(data.values()))])
+
+    output = names[pred[0]]
+    return jsonify(output)
