@@ -7,7 +7,7 @@ html {
 }
 
 h1 {
-  color: #fff;
+  color: rgb(8, 8, 8);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
   text-align: center;
@@ -18,7 +18,7 @@ body {
   height: 100%;
   font-family: "Helvetica";
   background: blue;
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 24px;
   text-align: center;
   letter-spacing: 1.4px;
@@ -41,7 +41,7 @@ input {
   outline: none;
   padding: 10px;
   font-size: 13px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -52,4 +52,9 @@ input {
   -o-transition: box-shadow 0.5s ease;
   -ms-transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
+}
+img{
+  width: 10%;
+  height: 10%;
+  left: 10%;
 }

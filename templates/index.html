@@ -11,19 +11,20 @@
   
 </head>
 
-<body style="background: #000;">
- <div class="login">
-	<h1>Classificador de espécies IRIS</h1>
+<body style="background: rgb(226, 236, 235);">
+  <div class="img">
+  <img src="https://cdn-icons-png.flaticon.com/512/1738/1738422.png" title="Logo da HomeHost">
+  </div>
+  <div class="login">
+
+  
+	<h1>Media Salarial de Um Profissional de TI Nos Estados Unidos </h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}" method="post">
-    <input type="text" name="sl" placeholder="Sepal length (cm)" required="required" />
-    <input type="text" name="sw" placeholder="Sepal width (cm)" required="required" />
-		<input type="text" name="pl" placeholder="Petal length (cm)" required="required" />
-		<input type="text" name="pw" placeholder="Petal length (cm)" required="required" />
-
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Classificar IRIS</button>
+    <input type="text" name="sl" placeholder="seus anos de experiencia:" required="required" />
+  
+        <button type="submit" class="btn btn-primary btn-block btn-large">Analizar Salario</button>
     </form>
 
    <br>

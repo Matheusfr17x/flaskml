@@ -5,7 +5,7 @@ import pickle
 
 app = Flask(__name__)
 model = pickle.load(open("model.pkl", "rb"))
-names = pickle.load(open("iris_names.pkl", "rb"))
+
 
 
 @app.route("/")
@@ -20,15 +20,16 @@ def predict():
     final_features = [np.array(features)]
     pred = model.predict(final_features)
 
-    output = names[pred[0]]
+    output = pred[0]
 
-    return render_template("index.html", prediction_text="Iris " + output)
+    output2 = pred[0]/12
+    
+    text = str(output) 
+
+    text = text[:-12]
+
+    text2 = str(output2) 
+    text2 = text2[:-12]
+    return render_template("index.html", prediction_text="Valor Ganho Anunalmente U$ : " + text + " Ganhos mensais U$ : "+text2)
 
 
-@app.route("/api", methods=["POST"])
-def results():
-    data = request.get_json(force=True)
-    pred = model.predict([np.array(list(data.values()))])
-
-    output = names[pred[0]]
-    return jsonify(output)
